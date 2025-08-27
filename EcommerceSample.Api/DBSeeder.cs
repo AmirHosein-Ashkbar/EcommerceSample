@@ -16,7 +16,7 @@ public static class DBSeeder
                 products.Add(new Product
                 {
                     Name = $"Product {i}",
-                    Price = 10.5m * i, // example price
+                    Price = 10 * i,
                     CreatedAt = DateTime.UtcNow,
                     IsActive = true,
                     IsDeleted = false

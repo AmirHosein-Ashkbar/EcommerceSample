@@ -14,12 +14,7 @@ public class GetAllProductsQueryHandler(IGenericRepository<Entity.Product> produ
     public async Task<Result<object>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
     {
         var products = await productRepository.GetAll();
-        var productsDto = products.Select(p => new ProductDto
-        {
-            Id = p.Id,
-            Name = p.Name,
-            Price = p.Price
-        });
+        var productsDto = products.Select(p => new ProductDto(p.Id, p.Name, p.Price));
 
         return Result<object>.Success(productsDto);
     }

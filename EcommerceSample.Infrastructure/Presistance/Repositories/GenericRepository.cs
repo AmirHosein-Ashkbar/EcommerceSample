@@ -15,6 +15,7 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         try
         {
             _context.Set<TEntity>().Add(order);
+            _context.SaveChanges();
             return true;
         }
         catch (Exception ex)

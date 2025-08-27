@@ -13,8 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Usecases\Order\Dto\" />
-    <Folder Include="Usecases\Order\Queries\" />
     <Folder Include="Usecases\Product\Validation\" />
   </ItemGroup>
 

@@ -5,7 +5,7 @@ using System.Net.Mime;
 namespace EcommerceSample.Api.Controllers;
 public class ProductController : BaseController
 {
-    [HttpPost]
+    [HttpGet]
     [Route("GetAll")]
     [Consumes(MediaTypeNames.Application.Json)]
     [ProducesResponseType(StatusCodes.Status200OK)]
